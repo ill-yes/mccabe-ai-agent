@@ -14,8 +14,13 @@ from radon.complexity import cc_visit
 
 # ---------------------------------------------------------------------------
 # Configuration --------------------------------------------------------------
-os.environ["OPENAI_API_KEY"] = "SET_YOUR_API_KEY_HERE"
+try:
+  from dotenv import load_dotenv
+  load_dotenv()
+except ModuleNotFoundError:
+  pass
 
+api_key = os.getenv("OPENAI_API_KEY")
 SCRIPT_DIR = Path(__file__).parent.resolve()
 INPUT_DIR = SCRIPT_DIR / "input"
 OUTPUT_DIR = SCRIPT_DIR / "output"

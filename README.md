@@ -44,7 +44,7 @@ Most knobs live in *refactor_agent_sdk.py* but can be overridden via env vars
 ## Tested with
 
 * Python 3.11
-* openai ≥ 1.24 & openai‑agents ≥ 0.1.0
+* openai ≥ 1.24 & openai‑agents ≥ 0.0.12
 
 Feel free to open issues or suggestions! 🎉
 
