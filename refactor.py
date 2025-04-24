@@ -94,9 +94,9 @@ def cyclomatic_complexity(code: str) -> int | None:
 
 def strip_fence(txt: str) -> str:
   lines = txt.strip().splitlines()
-  if len(lines) >= 2 and lines[0].startswith("```) and lines[-1].startswith("```)":
-  lines = lines[1:-1]
-return "\n".join(lines)
+  if len(lines) >= 2 and lines[0].startswith("```") and lines[-1].startswith("```"):
+    lines = lines[1:-1]
+  return "\n".join(lines)
 
 # ---------------------------------------------------------------------------
 # Agent wrappers (sync for brevity – ThreadPool takes care of I/O wait) ------
